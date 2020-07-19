@@ -18,7 +18,7 @@ Logistic Regression actually denotes a classification algorithm. It is a statist
 
 Suppose you want to predict whether a person with a tumor will survive or not and the given features include the age, sex, size of the tumor, and other factors regarding the person. Logistic regression is used to predict the probability of survival by using the given features. 
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.1.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.1.png){: .mx-auto.d-block :}
 
 Generally Logistic Regression can be classified into two categories :
 1. Binary logistic regression
@@ -34,7 +34,7 @@ The question arises that can we use linear regression to predict the classes usi
 
 Suppose we want to predict whether a tumor is malignant (“1”) or benign (“0”) based on the size. So let's fit a linear model on size vs class ( 0 or 1 ).
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.2.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.2.png){: .mx-auto.d-block :}
 
 The threshold that can be set to classify the output can be 0.5.
 If h<sub>Θ</sub>(x) >= 0.5 then predict y=1.
@@ -42,7 +42,7 @@ If h<sub>Θ</sub>(x) < 0.5 then predict y=0.
 
 But there is a problem with this approach. If we have another tumour size that is surely malignant and then we fit the linear model including this size too then the line shifts towards this new included point and the boundary also shifts. This makes the point that was earlier classified as malignant to be predicted as benign and this is not at all good :(
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.3.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.3.png){: .mx-auto.d-block :}
 
 There is also another problem. For classification, we need values of y i.e. the prediction to be between 0 and 1 as the probability cannot be less than 0 and greater than 1. But in linear regression the values less than zero and greater than 1 are also possible.
 
@@ -51,11 +51,11 @@ There is also another problem. For classification, we need values of y i.e. the 
 ## Logistic Function
 To deal with the problems stated in using linear regression we use a different function for logistic regression. With linear regression, we had h<sub>Θ</sub>(x) = Θ<sup>T</sup>x , but for the logistic regression we take h<sub>Θ</sub>(x) = g(Θ<sup>T</sup>x) where the 
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.4.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.4.png){: .mx-auto.d-block :}
 
 g(z) is known as sigmoid or logistic function. By using this function we get g(z) → 0 as z → −∞, g(z) = 0.5 if z=0 and g(z) → 1 as z → ∞. And thus for Logistic Regression we get 0 < h<sub>Θ</sub>(x) < 1.
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.5.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.5.png){: .mx-auto.d-block :}
 
 
 
@@ -80,29 +80,29 @@ The possible values for y can only be 0 and 1. By law of probability we can writ
 Decision boundary is a function of the regression parameters Θ, derived from training data.
 Let us understand this by an example. Suppose we have some data points like given in the figure
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.6.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.6.png){: .mx-auto.d-block :}
 
 After training the Logistic model on the dataset, we have Θ to be [-3 1 1]<sup>T</sup>. Now we know from the logistic function that h<sub>Θ</sub>(x) = 1 if Θ<sup>T</sup>x > 0 i.e.
  -3 + 1.x<sub>1</sub> +1.x<sub>2</sub> > 0 or x<sub>1</sub> +x<sub>2</sub> > 3.
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.7.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.7.png){: .mx-auto.d-block :}
 
 Decision boundaries are not always clear cut. That is, the transition from one class in the feature space to another is not discontinuous, but gradual.
 
 But suppose we have a dataset that looks like this
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.8.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.8.png){: .mx-auto.d-block :}
 
 Here we cannot separate these by a linear decision boundary but it can be done by a non-linear decision boundary.
 
 For that let 
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.9.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.9.png){: .mx-auto.d-block :}
 
 This means we are transforming our 2D space to a 5D feature space.
 Assigning Θ<sub>0</sub> = -1, Θ<sub>1</sub> = 0, Θ<sub>2</sub> = 0, Θ<sub>3</sub> = 1, Θ<sub>4</sub> = 1. Then, h<sub>Θ</sub>(x) = 1 if -1+ x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> ≥ 0 => x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> ≥ 1. 
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.10.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.10.png){: .mx-auto.d-block :}
 
 However more complex decision boundaries are also possible depending on our chosen feature space.  
 
@@ -111,29 +111,29 @@ However more complex decision boundaries are also possible depending on our chos
 ## Cost Function
 We previously saw that we cannot use linear regression for classification problem but can we use the cost function of linear regression for our logistic function. So let’s see what happens if we use linear regression cost function 
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.11.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.11.png){: .mx-auto.d-block :}
 
 What we get is this
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.12.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.12.png){: .mx-auto.d-block :}
 
 We cannot use gradient descent on this non-convex function because it may lead to getting stuck in a local minimum.
 
 The solution for this problem is to define a new cost function for Logistic Regression
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.13.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.13.png){: .mx-auto.d-block :}
 
 We can see that if our y=1 but predicted y is close to zero then we get a very huge error so this cost function is good and we will use gradient descent to decrease this error.
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.14.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.14.png){: .mx-auto.d-block :}
 
 Now rewriting the cost function we get
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.15.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.15.png){: .mx-auto.d-block :}
 
 Now we can apply gradient descent on this cost function to get the best fit parameters.
 
-![Crepe](https://shivank1006.github.io/blog/assets/img/3.16.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/3.16.png){: .mx-auto.d-block :}
 
 
 
