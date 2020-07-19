@@ -4,7 +4,7 @@ title: Logistic Regression
 subtitle: 
 cover-img: /assets/img/bgimg3.jpg
 thumbnail-img: 
-share-img: 
+share-img: /assets/img/bgimg3.jpg
 tags: [Logistic regression, Logistic Function, Gradient Descent]
 ---
 
