@@ -2,7 +2,7 @@
 layout: post
 title: Logistic Regression
 subtitle: 
-bigimg: /assets/img/bgimg3.jpg
+bigimg: ../assets/img/bgimg3.jpg
 tags: [Logistic regression, Logistic Function, Gradient Descent]
 ---
 
