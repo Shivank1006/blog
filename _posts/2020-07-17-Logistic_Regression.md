@@ -2,9 +2,12 @@
 layout: post
 title: Logistic Regression
 subtitle: 
-bigimg: ../assets/img/bgimg3.jpg
+cover-img: /assets/img/bgimg3.jpg
+thumbnail-img: 
+share-img: 
 tags: [Logistic regression, Logistic Function, Gradient Descent]
 ---
+
 
 Suppose we want to predict the risk of developing a disease to a person or we want to predict whether a student will pass or fail in an exam by using data like how many hours he/she spends on daily study. Here comes the need of Logistic Regression. Then let’s get started !
 
