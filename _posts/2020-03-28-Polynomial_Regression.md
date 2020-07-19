@@ -110,13 +110,13 @@ Overfitting refers to a condition when a model learns the data and the noise pre
 
 ## Bias-Variance Tradeoff
 
-<p align='center'><img src='/assets/img/2.10.png' align='centre'></p>
+<p align='center'><img src='https://github.com/Shivank1006/blog/blob/master/assets/img/2.10.png?raw=true' align='centre'></p>
 Bias is how far are the predicted values from the actual values. If there is so much difference in the predicted values and the actual values then we say the bias is high.
 
 
 Variance tells us how scattered are the predicted values from the actual values. High variance causes overfitting which means that our model is learning the noise present in the data.
 
-<p align='center'><img src='/assets/img/2.8.png' align='centre'></p>
+<p align='center'><img src='https://github.com/Shivank1006/blog/blob/master/assets/img/2.8.png?raw=true' align='centre'></p>
 <p align='center'>Bias-Variance Tradeoff</p>
 
 This figure depicts the bias-variance tradeoff in a very good way. It can be seen that as the complexity of the model increases i.e. if we use so many features or use a higher degree polynomial model to fit the data then the variance increases and bias decreases.
