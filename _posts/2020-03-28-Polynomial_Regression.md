@@ -2,12 +2,12 @@
 layout: post
 title: Polynomial Regression
 subtitle: 
-bigimg: /assets/img/bg2.jpg
+bigimg: https://shivank1006.github.io/blog/assets/img/bg2.jpg
 tags: [polynomial regression, overfitting, bias-variance tradeoff]
 ---
 Many times the data we have, cannot be fitted linearly and we need a higher degree polynomial ( like quadratic or cubic ) to fit the data. We can use a polynomial model when the relationship between outcome and explanatory variables is curvilinear as can be seen in the given figure. 
 
-![Crepe](/assets/img/2.0.png){: .center-block :}
+![Crepe](https://shivank1006.github.io/blog/assets/img/2.0.png){: .center-block :}
 
 This article requires the understanding of linear regression and the mathematics behind it. If you are not aware about it then you can refer to my previous article on [Linear Regression](https://shivank1006.github.io/blog/2020-03-14-Linear_Regression/).
 <br><br>
